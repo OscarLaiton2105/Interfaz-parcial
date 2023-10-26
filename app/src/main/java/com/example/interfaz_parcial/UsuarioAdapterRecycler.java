@@ -63,7 +63,7 @@ public class UsuarioAdapterRecycler extends RecyclerView.Adapter<UsuarioAdapterR
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             idUsuario = (TextView) itemView.findViewById( R.id.Codigo);
-            passwordUsuario = (TextView) itemView.findViewById( R.id.editTextTextPassword);
+            passwordUsuario = (TextView) itemView.findViewById( R.id.edittextcontra);
             itemView.setOnClickListener( this);
         }
 
