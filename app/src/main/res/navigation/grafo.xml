@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grafo"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.interfaz_parcial.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/iniciar_Sesion2"
+        android:name="com.example.interfaz_parcial.Iniciar_Sesion"
+        android:label="activity_iniciar_sesion"
+        tools:layout="@layout/activity_iniciar_sesion" />
+    <fragment
+        android:id="@+id/login4"
+        android:name="com.example.interfaz_parcial.Login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login4_to_iniciar_Sesion2"
+            app:destination="@id/iniciar_Sesion2" />
+        <action
+            android:id="@+id/action_login4_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+</navigation>
