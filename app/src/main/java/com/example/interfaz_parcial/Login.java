@@ -91,8 +91,8 @@ public class Login extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         idUsuario = (EditText) getView().findViewById( R.id.Codigo );
-        password = (EditText) getView().findViewById( R.id.editTextTextPassword );
-        loginBoton = (Button) getView().findViewById( R.id.button2 );
+        password = (EditText) getView().findViewById( R.id.edittextcontra );
+        loginBoton = (Button) getView().findViewById( R.id.botonin );
         registrarBoton = (Button) getView().findViewById( R.id. );
         baseDatos = new InventarioDBHelper( getContext() );
 

@@ -81,7 +81,7 @@ public class MenuPrincipalV2 extends Fragment implements UsuarioAdapterRecycler.
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        listaUsuarios = (RecyclerView) getView().findViewById( R.id.botonlistar);
+       listaUsuarios = (RecyclerView) getView().findViewById( R.id.botonlistar);
         bdInventario = new InventarioDBHelper(getContext() );
 
         listaUsuarios.setHasFixedSize( true );
