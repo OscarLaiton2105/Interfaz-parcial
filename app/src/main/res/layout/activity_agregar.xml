@@ -18,7 +18,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="200dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -26,8 +26,46 @@
                     android:background="@drawable/top_background"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="145dp"
+                        android:layout_height="149dp"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/logoagre"
+                        tools:layout_editor_absoluteX="263dp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="cursive"
+                        android:text="Estas en el apartado:"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="44dp"
+                        android:fontFamily="cursive"
+                        android:text="Agregar Productos"
+                        android:textColor="#F4BE40"
+                        android:textSize="35sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintStart_toStartOf="@+id/textView11"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11"
+                        app:layout_constraintVertical_bias="0.384" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -37,7 +75,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:fontFamily="cursive"
@@ -50,7 +88,7 @@
                 android:id="@+id/editTextText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/edittext_backgrond"
@@ -64,6 +102,7 @@
                 android:id="@+id/textView21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:fontFamily="cursive"
@@ -76,7 +115,7 @@
                 android:id="@+id/editTextText31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/edittext_backgrond"
@@ -90,6 +129,7 @@
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:fontFamily="cursive"
@@ -102,7 +142,7 @@
                 android:id="@+id/editTextText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/edittext_backgrond"
@@ -116,6 +156,7 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:fontFamily="cursive"
@@ -142,7 +183,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:fontFamily="cursive"
@@ -155,7 +196,7 @@
                 android:id="@+id/editTextTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/edittext_backgrond"
@@ -182,4 +223,5 @@
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
