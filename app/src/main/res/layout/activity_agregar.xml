@@ -193,7 +193,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/edittextcontra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -207,7 +207,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/botonagreinv"
                 style="@android:style/Widget.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -14,7 +14,7 @@ public class Iniciar_Sesion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
 
-        Button iniciarSesionButton = findViewById(R.id.button2);
+        Button iniciarSesionButton = findViewById(R.id.botonin);
 
         iniciarSesionButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -61,7 +61,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/edittextcontra"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
@@ -178,7 +178,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/botonin"
             style="@android:style/Widget.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
