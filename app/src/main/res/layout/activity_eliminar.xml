@@ -36,9 +36,9 @@
                         android:layout_width="199dp"
                         android:layout_height="154dp"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/eliminar_ya"
-                        tools:layout_editor_absoluteX="212dp" />
+                        app:srcCompat="@drawable/eliminar_ya" />
 
                     <TextView
                         android:id="@+id/textView10"
