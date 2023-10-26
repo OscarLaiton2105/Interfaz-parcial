@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.annotation.NonNull;
+
 import com.example.interfaz_parcial.data.TansaccionesContract.TransaccionesEntry;
 import com.example.interfaz_parcial.data.UsuarioContract.UsuarioEntry;
 import com.example.interfaz_parcial.data.UtensilioContract.UtensilioEntry;
@@ -19,7 +21,7 @@ public class InventarioDBHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(@NonNull SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + UsuarioEntry.TABLE_NAME + " (" +
                 UsuarioEntry.ID + " INTEGER PRIMARY KEY," +
                 UsuarioEntry.NAME + " TEXT NOT NULL," +
@@ -92,7 +94,7 @@ public class InventarioDBHelper extends SQLiteOpenHelper {
         );
     }
 
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(@NonNull SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + UtensilioEntry.TABLE_NAME + " (" +
                 UtensilioEntry.ID + " INTEGER PRIMARY KEY," +
                 UtensilioEntry.NAME + " TEXT NOT NULL," +
@@ -113,7 +115,7 @@ public class InventarioDBHelper extends SQLiteOpenHelper {
                         null);
     }
 
-    public long guardarUtensilio(Utensilio utensilio) {
+    public long guardarUtensilio(@NonNull Utensilio utensilio) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         return sqLiteDatabase.insert(
                 UtensilioEntry.TABLE_NAME,
@@ -121,7 +123,7 @@ public class InventarioDBHelper extends SQLiteOpenHelper {
                 utensilio.toContentValues());
     }
 
-    public int ActuaUtensilio(Utensilio utensilioModificar, String utensilioId) {
+    public int ActuaUtensilio(@NonNull Utensilio utensilioModificar, String utensilioId) {
         return getWritableDatabase().update(
                 UtensilioEntry.TABLE_NAME,
                 utensilioModificar.toContentValues(),
@@ -129,14 +131,20 @@ public class InventarioDBHelper extends SQLiteOpenHelper {
                 new String[]{utensilioId}
         );
     }
+    public int deleteUtensilio(String utensilioId) {
+        return getWritableDatabase().delete(
+                UtensilioEntry.TABLE_NAME,
+                UtensilioEntry.ID + " LIKE ?",
+                new String[]{utensilioId});
+    }
 
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(@NonNull SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TransaccionesEntry.TABLE_NAME + " (" +
                 TransaccionesEntry.ID_US + " INTEGER PRIMARY KEY," +
-                TransaccionesEntry.ID_UT + "INTERGER PRIMARY KEY," +
-                TransaccionesEntry.FECHA_ENTRADA + "DATE NOT NULL," +
-                TransaccionesEntry.FECHA_SALIDA + "DATE NOT NULL," +
-                TransaccionesEntry.CANTIDAD_TRA + "INTERGER NOT NULL) ");
+                TransaccionesEntry.ID_UT + " TEXT NOT NULL," +
+                TransaccionesEntry.FECHA_ENTRADA + " TEXT NOT NULL," +
+                TransaccionesEntry.FECHA_SALIDA + " INTERGER NOT NULL," +
+                TransaccionesEntry.CANTIDAD_TRA + "FLOAT NOT NULL)");
     }
 
     public Cursor getAllTransacciones() {

@@ -12,11 +12,11 @@ import com.example.interfaz_parcial.data.UtensilioContract.UtensilioEntry;
 public class Transacciones {
     private int id_us;
     private int id_ut;
-    private Date fecha_entrada;
-    private Date fecha_salida;
+    private String fecha_entrada;
+    private String fecha_salida;
     private int cantidadTra;
 
-    public Transacciones(int id_us, int id_ut, Date fecha_entrada, Date fecha_salida, int cantidadTra){
+    public Transacciones(int id_us, int id_ut, String fecha_entrada, String fecha_salida, int cantidadTra){
         this.id_us = id_us;
         this.id_ut = id_ut;
         this.fecha_entrada = fecha_entrada;
@@ -26,16 +26,16 @@ public class Transacciones {
     public Transacciones(Cursor cursor){
         id_us = cursor.getInt( cursor.getColumnIndex(UsuarioEntry.ID ) );
         id_ut = cursor.getInt (cursor.getColumnIndex(UtensilioEntry.ID ) );
-        fecha_entrada  = Date.valueOf(cursor.getString (cursor.getColumnIndex(TransaccionesEntry.FECHA_ENTRADA ) ));
-        fecha_salida  = Date.valueOf(cursor.getString (cursor.getColumnIndex(TransaccionesEntry.FECHA_SALIDA ) ));
+        fecha_entrada  = cursor.getString (cursor.getColumnIndex(TransaccionesEntry.FECHA_ENTRADA ) ));
+        fecha_salida  = cursor.getString (cursor.getColumnIndex(TransaccionesEntry.FECHA_SALIDA ) ));
         cantidadTra = cursor.getInt(cursor.getColumnIndex(TransaccionesEntry.CANTIDAD_TRA ) );
     }
     public ContentValues toContentValues() {
         ContentValues values = new ContentValues();
         values.put(TransaccionesEntry.ID_US, id_us);
         values.put(TransaccionesEntry.ID_UT, id_ut);
-        values.put(TransaccionesEntry.FECHA_ENTRADA, String.valueOf(fecha_entrada));
-        values.put(TransaccionesEntry.FECHA_SALIDA, String.valueOf(fecha_salida));
+        values.put(TransaccionesEntry.FECHA_ENTRADA, fecha_entrada);
+        values.put(TransaccionesEntry.FECHA_SALIDA, fecha_salida);
         values.put(TransaccionesEntry.CANTIDAD_TRA, cantidadTra);
         return values;
     }
@@ -56,19 +56,19 @@ public class Transacciones {
         this.id_ut = id_ut;
     }
 
-    public Date getFecha_entrada() {
+    public String getFecha_entrada() {
         return fecha_entrada;
     }
 
-    public void setFecha_entrada(Date fecha_entrada) {
+    public void setFecha_entrada(String fecha_entrada) {
         this.fecha_entrada = fecha_entrada;
     }
 
-    public Date getFecha_salida() {
+    public String getFecha_salida() {
         return fecha_salida;
     }
 
-    public void setFecha_salida(Date fecha_salida) {
+    public void setFecha_salida(String fecha_salida) {
         this.fecha_salida = fecha_salida;
     }
 

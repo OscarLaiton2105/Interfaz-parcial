@@ -27,7 +27,7 @@ public class UsuarioAdapterRecycler extends RecyclerView.Adapter<UsuarioAdapterR
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from( parent.getContext() ).inflate(R.layout.list_user_item,parent, false );
+        View v = LayoutInflater.from( parent.getContext() ).inflate(R.layout.activity_listar,parent, false );
         return new ViewHolder( v );
     }
 
@@ -62,9 +62,8 @@ public class UsuarioAdapterRecycler extends RecyclerView.Adapter<UsuarioAdapterR
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            idUsuario = (TextView) itemView.findViewById( R.id.itemUserID);
-            nombreUsuario = (TextView) itemView.findViewById( R.id.itemUserNome );
-            passwordUsuario = (TextView) itemView.findViewById( R.id.itemUserPassword );
+            idUsuario = (TextView) itemView.findViewById( R.id.Codigo);
+            passwordUsuario = (TextView) itemView.findViewById( R.id.editTextTextPassword);
             itemView.setOnClickListener( this);
         }
 
