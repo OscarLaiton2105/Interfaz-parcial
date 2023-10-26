@@ -188,7 +188,7 @@
                 android:layout_marginEnd="18dp"
                 android:fontFamily="cursive"
                 android:textStyle="bold"
-                android:text="Descripcion del producto"
+                android:text="Tipo del producto"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -201,7 +201,7 @@
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/edittext_backgrond"
                 android:ems="10"
-                android:hint="Introduce la descripcion"
+                android:hint="Introduce el tipo"
                 android:inputType="textPassword"
                 android:padding="12dp"
                 android:textSize="16sp" />
